@@ -753,7 +753,9 @@ String::String(const UChar * unicodeChars)
 {
     mUnicodeChars = NULL;
     reset();
-    allocate(u_strlen(unicodeChars));
+    if (unicodeChars != NULL) {
+        allocate(u_strlen(unicodeChars));
+    }
     appendCharacters(unicodeChars);
 }
 
