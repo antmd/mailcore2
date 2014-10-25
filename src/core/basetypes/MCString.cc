@@ -753,6 +753,7 @@ String::String(const UChar * unicodeChars)
 {
     mUnicodeChars = NULL;
     reset();
+    allocate(u_strlen(unicodeChars));
     appendCharacters(unicodeChars);
 }
 
@@ -760,6 +761,7 @@ String::String(const UChar * unicodeChars, unsigned int length)
 {
     mUnicodeChars = NULL;
     reset();
+    allocate(length);
     appendCharactersLength(unicodeChars, length);
 }
 
@@ -788,6 +790,7 @@ String::String(const char * bytes, unsigned int length, const char * charset)
 {
     mUnicodeChars = NULL;
     reset();
+    allocate(length);
     if (charset == NULL) {
         appendUTF8CharactersLength(bytes, length);
     }
