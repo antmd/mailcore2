@@ -4518,15 +4518,11 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lsasl2",
 					"-liconv",
 					"-ltidy",
 					"-lz",
-					"-licucore",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "MailCore-ios";
@@ -4548,15 +4544,11 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lsasl2",
 					"-liconv",
 					"-ltidy",
 					"-lz",
-					"-licucore",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "MailCore-ios";
@@ -4716,16 +4708,12 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lsasl2",
 					"-liconv",
 					"-all_load",
 					"-ltidy",
 					"-lz",
-					"-licucore",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -4751,16 +4739,12 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lsasl2",
 					"-liconv",
 					"-all_load",
 					"-ltidy",
 					"-lz",
-					"-licucore",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -4873,9 +4857,6 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate",
 					"-letpan",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lssl",
 					"-lcrypto",
@@ -4884,7 +4865,7 @@
 					"-all_load",
 					"-ltidy",
 					"-lz",
-					"-licucore",
+					"-luchardet",
 				);
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
@@ -4904,9 +4885,6 @@
 				OTHER_LDFLAGS = (
 					"-lctemplate",
 					"-letpan",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
 					"-lxml2",
 					"-lssl",
 					"-lcrypto",
@@ -4915,7 +4893,7 @@
 					"-all_load",
 					"-ltidy",
 					"-lz",
-					"-licucore",
+					"-luchardet",
 				);
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
