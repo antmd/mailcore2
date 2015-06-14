@@ -128,6 +128,9 @@ void OperationQueue::runOperations()
         if (!op->isCancelled()) {
             performOnCallbackThread(op, (Object::Method) &OperationQueue::callbackOnMainThread, op, true);
         }
+        else if (op->callback() != NULL && op->callback()->shouldFinishWhenOperationCancelled()) {
+            performOnCallbackThread(op, (Object::Method) &OperationQueue::operationFinished, op, true);
+        }
         
         if (needsCheckRunning) {
             retain(); // (1)
@@ -169,6 +172,11 @@ void OperationQueue::callbackOnMainThread(Operation * op)
     if (op->isCancelled())
         return;
     
+    operationFinished(op);
+}
+
+void OperationQueue::operationFinished(Operation *op)
+{
     if (op->callback() != NULL) {
         op->callback()->operationFinished(op);
     }

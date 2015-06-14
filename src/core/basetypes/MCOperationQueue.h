@@ -55,6 +55,7 @@ namespace mailcore {
         void runOperations();
         void beforeMain(Operation * op);
         void callbackOnMainThread(Operation * op);
+        void operationFinished(Operation *op);
         void checkRunningOnMainThread(void * context);
         void checkRunningAfterDelay(void * context);
         void stoppedOnMainThread(void * context);
