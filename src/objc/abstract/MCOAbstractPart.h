@@ -110,4 +110,11 @@ namespace mailcore {
 
 @end
 
+@interface MCOAbstractPart (MCOUnavailable)
+
+/** Do not invoke this directly. */
+- (id) init NS_UNAVAILABLE;
+
+@end
+
 #endif
